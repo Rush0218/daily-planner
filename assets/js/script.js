@@ -1,3 +1,16 @@
+window.onload = function() {
+    statusColor(); 
+    nineAm(); 
+    tenAm(); 
+    elevenAm();
+    twelvePm(); 
+    onePm();
+    twoPm(); 
+    threePm(); 
+    fourPm(); 
+    fivePm();
+}
+
 var date = document.querySelector("#currentDay"); 
 var time = new Date().getHours(); 
 
@@ -6,69 +19,70 @@ var time = new Date().getHours();
 var currentDate = moment().format("dddd, LL"); 
 date.append(currentDate); 
 
+
 //create time blocks for standard business hours that are color coded for past, present and future. 
-var statusColor = function() {
-    if (now > 9) {
+function statusColor() {
+    if (time > 9) {
         $("#text9").addClass("past");
-      } else if (now >= 9 && now < 10) {
+      } else if (time >= 9 && time < 10) {
         $("#text9").addClass("present");
-      } else if (now < 9) {
+      } else if (time < 9) {
         $("#text9").addClass("future");
       }
-      if (now > 10) {
+      if (time > 10) {
         $("#text10").addClass("past");
-      } else if (now >= 10 && now < 11) {
+      } else if (time >= 10 && time < 11) {
         $("#text10").addClass("present");
-      } else if (now < 10) {
+      } else if (time < 10) {
         $("#text10").addClass("future");
       }
-      if (now > 11) {
+      if (time > 11) {
         $("#text11").addClass("past");
-      } else if (now >= 11 && now < 12) {
+      } else if (time >= 11 && time < 12) {
         $("#text11").addClass("present");
-      } else if (now < 11) {
+      } else if (time < 11) {
         $("#text11").addClass("future");
       }
-      if (now > 12) {
+      if (time > 12) {
         $("#text12").addClass("past");
-      } else if (now >= 12 && now < 13) {
+      } else if (time >= 12 && time < 13) {
         $("#text12").addClass("present");
-      } else if (now < 12) {
+      } else if (time < 12) {
         $("#text12").addClass("future");
       }
-      if (now > 13) {
+      if (time > 13) {
         $("#text01").addClass("past");
-      } else if (now >= 13 && now < 14) {
+      } else if (time >= 13 && time < 14) {
         $("#text01").addClass("present");
-      } else if (now < 13) {
+      } else if (time < 13) {
         $("#text01").addClass("future");
       }
-      if (now > 14) {
+      if (time > 14) {
         $("#text02").addClass("past");
-      } else if (now >= 14 && now < 15) {
+      } else if (time >= 14 && time < 15) {
         $("#text02").addClass("present");
-      } else if (now < 14) {
+      } else if (time < 14) {
         $("#text02").addClass("future");
       }
-      if (now > 15) {
+      if (time > 15) {
         $("#text03").addClass("past");
-      } else if (now >= 15 && now < 16) {
+      } else if (time >= 15 && time < 16) {
         $("#text03").addClass("present");
-      } else if (now < 15) {
+      } else if (time < 15) {
         $("#text03").addClass("future");
       }
-      if (now > 16) {
+      if (time > 16) {
         $("#text04").addClass("past");
-      } else if (now >= 16 && now < 17) {
+      } else if (time >= 16 && time < 17) {
         $("#text04").addClass("present");
-      } else if (now < 16) {
+      } else if (time < 16) {
         $("#text04").addClass("future");
       }
-      if (now > 17) {
+      if (time > 17) {
         $("#text05").addClass("past");
-      } else if (now >= 17 && now < 18) {
+      } else if (time >= 17 && time < 18) {
         $("#text05").addClass("present");
-      } else if (now < 17) {
+      } else if (time < 17) {
         $("#text05").addClass("future");
       }
 };
@@ -78,46 +92,133 @@ var nineAm = function() {
     var input = document.querySelector("#text9");
     var output = document.querySelector("#text9");
     var saveBtn = document.querySelector("#button9");
-    
-    output.textContent = localStorage.getItem("content");
-    input.value = localStorage.getItem("content");
 
-    function update() {
-      localStorage.setItem("content", input.value);
-  
+    function update9() {
+      localStorage.setItem("content9", input.value);
       output.textContent = input.value;
     }
-    saveBtn.addEventListener("click", update);
+
+    saveBtn.addEventListener("click", update9);
+    output.textContent = localStorage.getItem("content9");
+    input.value = localStorage.getItem("content9");
 }; 
 
 var tenAm = function() {
     var input = document.querySelector("#text10");
     var output = document.querySelector("#text10");
     var saveBtn = document.querySelector("#button10");
-    
-    output.textContent = localStorage.getItem("content");
-    input.value = localStorage.getItem("content");
 
-    function update() {
-      localStorage.setItem("content", input.value);
-  
-      output.textContent = input.value;
+    function update10() {
+        localStorage.setItem("content10", input.value);
+        output.textContent = input.value;
     }
-    saveBtn.addEventListener("click", update);
+    
+    saveBtn.addEventListener("click", update10);
+    output.textContent = localStorage.getItem("content10");
+    input.value = localStorage.getItem("content10");
 }; 
 
-var nineAm = function() {
-    var input = document.querySelector("#text9");
-    var output = document.querySelector("#text9");
-    var saveBtn = document.querySelector("#button9");
-    
-    output.textContent = localStorage.getItem("content");
-    input.value = localStorage.getItem("content");
+var elevenAm = function() {
+    var input = document.querySelector("#text11");
+    var output = document.querySelector("#text11");
+    var saveBtn = document.querySelector("#button11");
 
-    function update() {
-      localStorage.setItem("content", input.value);
-  
-      output.textContent = input.value;
+    function update11() {
+        localStorage.setItem("content11", input.value);
+        output.textContent = input.value;
     }
-    saveBtn.addEventListener("click", update);
+    
+    saveBtn.addEventListener("click", update11);
+    output.textContent = localStorage.getItem("content11");
+    input.value = localStorage.getItem("content11");
+}; 
+
+var twelvePm = function() {
+    var input = document.querySelector("#text12");
+    var output = document.querySelector("#text12");
+    var saveBtn = document.querySelector("#button12");
+
+    function update12() {
+        localStorage.setItem("content12", input.value);
+        output.textContent = input.value;
+    }
+
+    saveBtn.addEventListener("click", update12);
+    output.textContent = localStorage.getItem("content12");
+    input.value = localStorage.getItem("content12");
+}; 
+
+var onePm = function() {
+    var input = document.querySelector("#text01");
+    var output = document.querySelector("#text01");
+    var saveBtn = document.querySelector("#button01");
+
+    function update1() {
+        localStorage.setItem("content01", input.value);
+        output.textContent = input.value;
+    }
+
+    saveBtn.addEventListener("click", update1);
+    output.textContent = localStorage.getItem("content01");
+    input.value = localStorage.getItem("content01");
+}; 
+
+var twoPm = function() {
+    var input = document.querySelector("#text02");
+    var output = document.querySelector("#text02");
+    var saveBtn = document.querySelector("#button02");
+    
+    function update2() {
+        localStorage.setItem("content02", input.value);
+        output.textContent = input.value;
+    }
+
+    saveBtn.addEventListener("click", update2);
+    output.textContent = localStorage.getItem("content02");
+    input.value = localStorage.getItem("content02");
+}; 
+
+var threePm = function() {
+    var input = document.querySelector("#text03");
+    var output = document.querySelector("#text03");
+    var saveBtn = document.querySelector("#button03");
+
+    function update3() {
+        localStorage.setItem("content03", input.value);
+        output.textContent = input.value;
+    }
+
+    saveBtn.addEventListener("click", update3);
+    output.textContent = localStorage.getItem("content03");
+    input.value = localStorage.getItem("content03");
+}; 
+
+var fourPm = function() {
+    var input = document.querySelector("#text04");
+    var output = document.querySelector("#text04");
+    var saveBtn = document.querySelector("#button04");
+
+    function update4() {
+        localStorage.setItem("content04", input.value);
+        output.textContent = input.value;
+    }
+
+    saveBtn.addEventListener("click", update4);
+    output.textContent = localStorage.getItem("content04");
+    input.value = localStorage.getItem("content04");
+}; 
+
+var fivePm = function() {
+    var input = document.querySelector("#text05");
+    var output = document.querySelector("#text05");
+    var saveBtn = document.querySelector("#button05");
+
+    function update5() {
+        localStorage.setItem("content05", input.value);
+        output.textContent = input.value;
+    }
+
+    saveBtn.addEventListener("click", update5);
+    output.textContent = localStorage.getItem("content05");
+    input.value = localStorage.getItem("content05");
 }; 
