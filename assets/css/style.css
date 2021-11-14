@@ -18,7 +18,7 @@ body {
     background-color: transparent;
     color: black;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    margin-bottom: 5px;
   }
   
   .description{
@@ -57,9 +57,9 @@ body {
   }
   
   .saveBtn {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-left: 1px solid white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     background-color: #06AED5;
     color: white;
   }

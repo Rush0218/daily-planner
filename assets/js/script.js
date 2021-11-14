@@ -19,7 +19,6 @@ var date = document.querySelector("#currentDay");
 var currentDate = moment().format("dddd, LL"); 
 date.append(currentDate); 
 
-
 //create time blocks for standard business hours that are color coded for past, present and future. 
 function statusColor() {
     if (time > 9) {
@@ -97,7 +96,7 @@ var nineAm = function() {
       localStorage.setItem("content9", input.value);
       output.textContent = input.value;
     }
-
+    
     saveBtn.addEventListener("click", update9);
     output.textContent = localStorage.getItem("content9");
     input.value = localStorage.getItem("content9");
