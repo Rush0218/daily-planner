@@ -11,11 +11,11 @@ window.onload = function() {
     fivePm();
 }
 
-var date = document.querySelector("#currentDay"); 
+//create var to track real time
 var time = new Date().getHours(); 
 
-
 //when planner is opened the current date is displayed
+var date = document.querySelector("#currentDay");
 var currentDate = moment().format("dddd, LL"); 
 date.append(currentDate); 
 
